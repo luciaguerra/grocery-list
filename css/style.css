@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+body, .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Caprasimo', cursive;
+    margin: 3rem 0 1rem;
+}
