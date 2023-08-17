@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@400;500&display=swap');
 
+:root {
+    --font-color: #0E2430;
+    --bg-color: #ed4558;
+    --bg-coor: #f8bf64;
+    --container-color: #efe5d5;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,15 +18,48 @@ body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     text-align: center;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+
+}
+
+body, .write-list {
+    justify-content: center;
+}
+
+body, .container, .write-list {
+    display: flex;
+    align-items: center;
 }
 
 body, .container {
-    display: flex;
-    align-items: center;
     flex-direction: column;
 }
 
 h1 {
     font-family: 'Caprasimo', cursive;
-    margin: 3rem 0 1rem;
+    margin: 2rem 0 1rem;
+    font-size: 5vw;
+}
+
+i {
+    font-size: 1.5rem;
+
+}
+
+input {
+    width: 60%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--font-color);
+    font-family: "Inter", sans-serif;
+    padding: 0.5rem;
+}
+
+.container {
+    min-width: 50%;
+    min-height: 80vh;
+    background-color: var(--container-color);
+    border-radius: 2rem;
 }
