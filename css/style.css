@@ -19,57 +19,76 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--font-color);
     background-color: var(--bg-color);
+    line-height: 1.75;
+}
 
+body, .container, .write-list, .groceries {
+    display: flex;
 }
 
 body, .write-list {
     justify-content: center;
 }
 
-body, .container, .write-list {
-    display: flex;
+body, .container, .write-list, .groceries {
     align-items: center;
 }
 
-body, .container {
+body, .container, .groceries {
     flex-direction: column;
 }
 
 h1 {
     font-family: 'Caprasimo', cursive;
-    margin: 2rem 0 1rem;
+    margin: 1.5rem 0 1rem;
     font-size: 5vw;
+    text-align: center;
 }
 
 i {
     font-size: 1.5rem;
+}
 
+li {
+    font-size: 1rem;
+    cursor: default;
 }
 
 input {
-    width: 60%;
+    width: 50%;
     outline: none;
     border: none;
     background-color: transparent;
     border-bottom: 2px solid var(--font-color);
-    padding: 0.5rem;
 }
 
-::marker {
-    text-align: start;
-}
 
-input, #allItems {
+input, .groceries {
     font-family: "Inter", sans-serif;
 }
 
-#allItems {
-    margin: 2rem 0;
+.groceries {
+    width: 60%;
+    margin: 2rem 1rem;
+    align-items: center;
 }
 
 .container {
     min-width: 50%;
+    max-width: 70%;
     min-height: 80vh;
     background-color: var(--container-color);
     border-radius: 2rem;
+    box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.181);
+}
+
+@media screen and (max-width: 939px) {
+
+}
+
+@media screen and (max-width: 556px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
 }
