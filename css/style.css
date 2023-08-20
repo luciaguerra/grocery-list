@@ -3,7 +3,7 @@
 :root {
     --font-color: #0E2430;
     --bg-color: #ed4558;
-    --bg-coor: #f8bf64;
+    --icon-color: #f8bf64;
     --container-color: #efe5d5;
 }
 
@@ -19,7 +19,8 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--font-color);
     background-color: var(--bg-color);
-    line-height: 1.75;
+    line-height: 1.5;
+    word-break: break-word;
 }
 
 body, .container, .write-list, .groceries {
@@ -40,13 +41,17 @@ body, .container, .groceries {
 
 h1 {
     font-family: 'Caprasimo', cursive;
-    margin: 1.5rem 0 1rem;
+    margin: 1.5rem 0 0.5rem;
     font-size: 5vw;
     text-align: center;
 }
 
-i {
+#pencil {
     font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
 }
 
 li {
@@ -54,22 +59,27 @@ li {
     cursor: default;
 }
 
+li::before {
+    content: "★";
+    color: var(--icon-color);
+    margin: 0 0.5rem;
+}
+
 input {
-    width: 50%;
+    width: 100%;
     outline: none;
     border: none;
     background-color: transparent;
     border-bottom: 2px solid var(--font-color);
+    padding: 0.2rem;
 }
-
 
 input, .groceries {
     font-family: "Inter", sans-serif;
 }
 
 .groceries {
-    width: 60%;
-    margin: 2rem 1rem;
+    padding: 1.5rem 3rem;
     align-items: center;
 }
 
@@ -82,13 +92,50 @@ input, .groceries {
     box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.181);
 }
 
-@media screen and (max-width: 939px) {
-
+.credit {
+    margin: 0.75rem 0;
+    font-size: 0.65rem;
+    color: var(--container-color);
 }
 
-@media screen and (max-width: 556px) {
+@media screen and (max-width: 632px) {
+    h1 {
+        font-size: 2.3rem;
+        margin: 1.5rem 0;
+    }
+
+    input {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 548px) {
+    h1 {
+        margin: 2rem 2rem 1rem;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    .groceries {
+        padding: 1.5rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
     h1 {
         font-size: 1.5rem;
     }
 
+    .groceries {
+        padding: 1.5rem 1rem;
+    }
 }
